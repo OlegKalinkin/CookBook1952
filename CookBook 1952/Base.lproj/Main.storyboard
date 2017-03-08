@@ -142,6 +142,9 @@
                             <constraint firstItem="7zy-ZU-D2i" firstAttribute="centerX" secondItem="ZMD-uA-lRj" secondAttribute="centerX" id="n3B-Vv-l1A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="geb-wP-u3Z" id="WMC-4d-xF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpF-FL-0lz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
