@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PdfViewController: UIViewController {
+class PdfViewController: UIViewController, URLSessionDelegate {
     
     //Переменные куда будем передавать информацию из PdfListController
     var localPdfUrls: URL?
@@ -46,7 +46,18 @@ class PdfViewController: UIViewController {
         self.preparePageViewController() //Метод отвечающий за отображение PDF документа
     }
     
+    // Реализуем функцию загрузки PDF из интернета:
     func loadRemotePdf() {
+        progressView.setProgress(0, animated: false)
+        
+        // Создаем задачу по загрузке документа:
+        // Cначала конфигурируем сессию
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig, delegate: self, delegateQueue: nil)
+        // Создаем собственно задачу по загрузке
+        let downloadTask = session.downloadTask(with: remotePdfUrls!)
+        
+        downloadTask.resume()
         
     }
     
