@@ -12,6 +12,7 @@
 		472859B61E5EE74F004014BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472859B41E5EE74F004014BF /* Main.storyboard */; };
 		472859B81E5EE74F004014BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472859B71E5EE74F004014BF /* Assets.xcassets */; };
 		472859BB1E5EE74F004014BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472859B91E5EE74F004014BF /* LaunchScreen.storyboard */; };
+		4757ADFD1E718DBF001372E5 /* PdfPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757ADFC1E718DBF001372E5 /* PdfPageViewController.swift */; };
 		47EB96821E70395E00CEE1A9 /* PdfListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB96811E70395E00CEE1A9 /* PdfListViewController.swift */; };
 		47EB96881E70470D00CEE1A9 /* CookBook 1952.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 47EB96871E70470D00CEE1A9 /* CookBook 1952.pdf */; };
 		47EB968A1E7079EB00CEE1A9 /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB96891E7079EB00CEE1A9 /* PdfViewController.swift */; };
@@ -25,6 +26,7 @@
 		472859B71E5EE74F004014BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		472859BA1E5EE74F004014BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		472859BC1E5EE74F004014BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4757ADFC1E718DBF001372E5 /* PdfPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfPageViewController.swift; sourceTree = "<group>"; };
 		47EB96811E70395E00CEE1A9 /* PdfListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfListViewController.swift; sourceTree = "<group>"; };
 		47EB96871E70470D00CEE1A9 /* CookBook 1952.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CookBook 1952.pdf"; sourceTree = "<group>"; };
 		47EB96891E7079EB00CEE1A9 /* PdfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				472859B41E5EE74F004014BF /* Main.storyboard */,
 				47EB96811E70395E00CEE1A9 /* PdfListViewController.swift */,
 				47EB96891E7079EB00CEE1A9 /* PdfViewController.swift */,
+				4757ADFC1E718DBF001372E5 /* PdfPageViewController.swift */,
 				472859B71E5EE74F004014BF /* Assets.xcassets */,
 				472859B91E5EE74F004014BF /* LaunchScreen.storyboard */,
 				472859BC1E5EE74F004014BF /* Info.plist */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47EB96821E70395E00CEE1A9 /* PdfListViewController.swift in Sources */,
+				4757ADFD1E718DBF001372E5 /* PdfPageViewController.swift in Sources */,
 				472859B31E5EE74F004014BF /* ViewController.swift in Sources */,
 				472859B11E5EE74F004014BF /* AppDelegate.swift in Sources */,
 				47EB968A1E7079EB00CEE1A9 /* PdfViewController.swift in Sources */,

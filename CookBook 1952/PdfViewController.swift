@@ -14,6 +14,7 @@ class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloa
     var localPdfUrls: URL?
     var remotePdfUrls: URL?
     var pdfDocument: CGPDFDocument? /*Когда скачивается pdf из интернета создается документ с информацией содержащейся в нем*/
+    var pageController: UIPageViewController!
     
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -61,8 +62,22 @@ class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloa
         
     }
     
+    // Этот метод подготавливает контроллер для анимации и отображения страниц:
     func preparePageViewController() {
+      pageController = self.storyboard?.instantiateViewController(withIdentifier: "UIPageViewController") as! UIPageViewController
         
+        self.addChildViewController(pageController)
+        
+        pageController.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        
+        let pageVc = self.storyboard?.instantiateViewController(withIdentifier: "PdfPageViewController") as! PdfPageViewController
+        
+        pageVc.pdfDocument = pdfDocument
+        pageVc.pageNumber = 1
+        
+        self.view.addSubview(pageController.view)
+        
+        pageController.setViewControllers([pageVc], direction: .forward, animated: true, completion: nil)
     }
     
     // Реализуем делегат URLSessionDelegate:
