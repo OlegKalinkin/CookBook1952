@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloadDelegate {
+class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloadDelegate, UIPageViewControllerDataSource {
     
     //Переменные куда будем передавать информацию из PdfListController
     var localPdfUrls: URL?
@@ -78,6 +78,34 @@ class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloa
         self.view.addSubview(pageController.view)
         
         pageController.setViewControllers([pageVc], direction: .forward, animated: true, completion: nil)
+    }
+    
+    // Перед загрузкой документа реализуем два метода UIPageViewControllerDataSource
+    // Первый метод Before:
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        let pageVc = viewController as! PdfPageViewController
+        
+        if pageVc.pageNumber! > 1 {
+            let previousPageVc = self.storyboard?.instantiateViewController(withIdentifier: "PdfPageViewController") as! PdfPageViewController
+            
+            previousPageVc.pdfDocument = pdfDocument
+            previousPageVc.pageNumber = pageVc.pageNumber! - 1
+            
+            return previousPageVc
+        }
+        
+        return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        let pageVc = viewController as! PdfPageViewController
+        
+        let previousPageVc = self.storyboard?.instantiateViewController(withIdentifier: "PdfPageViewController") as! PdfPageViewController
+        
+        previousPageVc.pdfDocument = pdfDocument
+        previousPageVc.pageNumber = pageVc.pageNumber! + 1
+        
+        return previousPageVc
     }
     
     // Реализуем делегат URLSessionDelegate:
