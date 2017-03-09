@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PdfViewController: UIViewController, URLSessionDelegate {
+class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloadDelegate {
     
     //Переменные куда будем передавать информацию из PdfListController
     var localPdfUrls: URL?
@@ -63,5 +63,27 @@ class PdfViewController: UIViewController, URLSessionDelegate {
     
     func preparePageViewController() {
         
+    }
+    
+    // Реализуем делегат URLSessionDelegate:
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        self.localPdfUrls = location
+        self.loadLocalPdf()
+    }
+    
+    // Реализуем делегат где будет происходить подсчет progressView
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+        
+    // После подсчета прогресса, обеспечиваем его постоянное обновление. Делаем это в главном потоке:
+        DispatchQueue.main.async {
+            self.progressView.setProgress(progress, animated: true)
+        }
+        
+    }
+    
+    // Реализуем еще один метод у делегата на случай возникновения ошибки
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        dump (error)
     }
 }
