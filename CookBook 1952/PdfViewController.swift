@@ -66,6 +66,8 @@ class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloa
     func preparePageViewController() {
       pageController = self.storyboard?.instantiateViewController(withIdentifier: "UIPageViewController") as! UIPageViewController
         
+        self.pageController.dataSource = self
+        
         self.addChildViewController(pageController)
         
         pageController.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)

@@ -41,7 +41,9 @@ class PdfPageView: UIView {
             let ofsetX = (rect.size.width - newWidth)
             let ofsetY = (rect.size.height - newHeight)
             
-            ctx?.scaleBy(x: -(pageRect?.origin.x)! + ofsetX, y: -(pageRect?.origin.y)! + ofsetY)
+            ctx?.scaleBy(x: newWidth / (pageRect?.size.width)!, y: newHeight / (pageRect?.size.height)!)
+            
+            ctx?.translateBy(x: -(pageRect?.origin.x)! + ofsetX, y: -(pageRect?.origin.y)! + ofsetY)
             
             ctx?.drawPDFPage(page!)
         }
