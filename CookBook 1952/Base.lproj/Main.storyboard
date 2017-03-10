@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pdf List View Controller-->
+        <!--Доступные ресурсы-->
         <scene sceneID="SIu-hB-luL">
             <objects>
                 <tableViewController id="ZHn-hO-HC9" customClass="PdfListViewController" customModule="CookBook_1952" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,17 +18,17 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="0.55054373089999997" green="0.99471542499999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Local PDF" id="NSX-7R-6uW">
+                            <tableViewSection headerTitle="Базовая кулинарная книга" id="NSX-7R-6uW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="PWC-WL-baz" style="IBUITableViewCellStyleDefault" id="S7v-rg-Krl">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S7v-rg-Krl" id="Wcu-Dv-Mzq">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Книга о вкусной и здоровой пище" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PWC-WL-baz">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="289" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.58117861680000005" green="0.14900182140000001" blue="0.13363185950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,17 +39,17 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Remote PDF" id="cNd-fQ-DF1">
+                            <tableViewSection headerTitle="Вспомогательные ресурсы:" id="cNd-fQ-DF1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="PWY-Pa-hyW" style="IBUITableViewCellStyleDefault" id="JhV-y7-8di">
-                                        <rect key="frame" x="0.0" y="156" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JhV-y7-8di" id="Dm2-ue-DYN">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Мультиварка - 1000 рецептов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PWY-Pa-hyW">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="289" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.1064698494" green="0.20685391589999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,14 +59,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="bGm-5g-mZV" style="IBUITableViewCellStyleDefault" id="UeF-77-hix">
-                                        <rect key="frame" x="0.0" y="200" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UeF-77-hix" id="Kz7-uG-khw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Рецепты кулинарного счастья" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bGm-5g-mZV">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="289" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.1064698494" green="0.20685391589999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,14 +76,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="NLl-Xh-nhd" style="IBUITableViewCellStyleDefault" id="EJA-js-nYb">
-                                        <rect key="frame" x="0.0" y="244" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="243.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EJA-js-nYb" id="0aF-UX-pM8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Рецепты национальных кухонь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NLl-Xh-nhd">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="289" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.1064698494" green="0.20685391589999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,7 +100,7 @@
                             <outlet property="delegate" destination="ZHn-hO-HC9" id="fc4-1q-cZO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ovk-C1-zqk"/>
+                    <navigationItem key="navigationItem" title="Доступные ресурсы" id="ovk-C1-zqk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOi-ff-vne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,10 +169,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rP-zw-DSO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="7" translatesAutoresizingMaskIntoConstraints="NO" id="9rP-zw-DSO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEo-XA-Lm8">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEo-XA-Lm8" customClass="PdfPageView" customModule="CookBook_1952" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -185,6 +185,9 @@
                                     <constraint firstItem="AEo-XA-Lm8" firstAttribute="centerX" secondItem="9rP-zw-DSO" secondAttribute="centerX" id="Vdq-aJ-hzb"/>
                                     <constraint firstAttribute="trailing" secondItem="AEo-XA-Lm8" secondAttribute="trailing" id="ySx-dQ-PL9"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="Vnb-Gv-dcm" id="OBN-vD-qAC"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -195,6 +198,9 @@
                             <constraint firstItem="9rP-zw-DSO" firstAttribute="top" secondItem="wSd-YS-5AX" secondAttribute="top" id="yXs-AT-L4j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="page" destination="AEo-XA-Lm8" id="VV6-zT-4tz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eja-1k-8Oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
