@@ -38,7 +38,7 @@ class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloa
         
         let pdfAsData = NSData(contentsOf: localPdfUrls!) //Представляем PDF как данные
         
-        let dataProvider = CGDataProvider(data: pdfAsData!) /*Пропускае данные через CGDataProvider, что бы не беспокоиться о буфере данных*/
+        let dataProvider = CGDataProvider(data: pdfAsData!) /*Пропускаем данные через CGDataProvider, что бы не беспокоиться о буфере данных*/
         
         self.pdfDocument = CGPDFDocument(dataProvider!) /* CGPDFDocument и CGDataProvider это классы фреймворка CoreGraphik */
         
