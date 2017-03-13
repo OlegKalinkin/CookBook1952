@@ -118,7 +118,7 @@ class PdfViewController: UIViewController, URLSessionDelegate, URLSessionDownloa
     
     // Реализуем делегат где будет происходить подсчет progressView
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+        let progress = Float(totalBytesWritten) / Float(totalBytesWritten)
         
     // После подсчета прогресса, обеспечиваем его постоянное обновление. Делаем это в главном потоке:
         DispatchQueue.main.async {
